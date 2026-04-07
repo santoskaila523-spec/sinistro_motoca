@@ -1,0 +1,3 @@
+<?php
+
+$FORMULARIO_VALIDACAO_OBRIGATORIA = true;

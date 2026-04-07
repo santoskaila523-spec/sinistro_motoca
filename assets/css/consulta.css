@@ -1,0 +1,279 @@
+:root {
+    --motoca-yellow: #f5e500;
+    --motoca-yellow-soft: rgba(245, 229, 0, 0.12);
+    --motoca-border: rgba(245, 229, 0, 0.22);
+    --motoca-text-soft: #d4d4d4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.consulta-page {
+    min-height: 100dvh;
+    background:
+        radial-gradient(circle at top, rgba(245, 229, 0, 0.11), transparent 28%),
+        linear-gradient(180deg, #050505 0%, #000 60%, #080808 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.consulta-page .container {
+    width: 100%;
+    max-width: 980px;
+    padding: 40px 20px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 26px;
+}
+
+.consulta-page .logo-site {
+    width: 260px;
+    max-width: 100%;
+    animation: logoFloat 3.2s ease-in-out infinite;
+    filter: brightness(1.08) contrast(1.04) saturate(1.45) hue-rotate(3deg) drop-shadow(0 6px 14px rgba(245, 229, 0, .16));
+}
+
+.hero {
+    text-align: center;
+    max-width: 680px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    color: var(--motoca-yellow);
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: var(--motoca-text-soft);
+    line-height: 1.6;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--motoca-yellow-soft);
+    color: var(--motoca-yellow);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.consulta-form {
+    width: 100%;
+    max-width: 640px;
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid var(--motoca-border);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+    display: grid;
+    gap: 12px;
+}
+
+.consulta-form label {
+    font-weight: 700;
+    color: var(--motoca-yellow);
+}
+
+.consulta-form input {
+    height: 52px;
+    border-radius: 999px;
+    border: 2px solid var(--motoca-yellow);
+    background: transparent;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.consulta-form input::placeholder {
+    color: #a9a9a9;
+}
+
+.consulta-form button {
+    height: 48px;
+    border-radius: 999px;
+    border: 2px solid var(--motoca-yellow);
+    background: var(--motoca-yellow);
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.consulta-form button:hover,
+.consulta-form button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(245, 229, 0, 0.25);
+    outline: none;
+}
+
+.resultado {
+    width: 100%;
+    max-width: 640px;
+    padding: 22px;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 6px 0 22px;
+    padding: 6px 8px 0;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 12px;
+    right: 12px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+}
+
+.timeline-step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #111;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.timeline-label {
+    font-size: 12px;
+    color: var(--motoca-text-soft);
+    text-align: center;
+    max-width: 150px;
+}
+
+.timeline-step.is-done .timeline-dot,
+.timeline-step.is-active .timeline-dot {
+    border-color: var(--motoca-yellow);
+    background: var(--motoca-yellow);
+}
+
+.timeline-step.is-active .timeline-dot {
+    box-shadow: 0 0 0 6px rgba(245, 229, 0, 0.18);
+}
+
+.timeline-step.is-active .timeline-label,
+.timeline-step.is-done .timeline-label {
+    color: #fff;
+}
+
+.resultado-erro {
+    color: #ffb4b4;
+    border-color: rgba(255, 120, 120, 0.35);
+}
+
+.resultado-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.resultado-header h2 {
+    font-size: 18px;
+    color: #fff7a8;
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--motoca-yellow-soft);
+    color: var(--motoca-yellow);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.resultado-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.resultado-grid strong {
+    display: block;
+    font-size: 13px;
+    color: var(--motoca-yellow);
+    margin-bottom: 6px;
+}
+
+.resultado-grid span {
+    font-size: 15px;
+    color: var(--motoca-text-soft);
+}
+
+.voltar {
+    color: var(--motoca-yellow);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.voltar:hover,
+.voltar:focus-visible {
+    text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+    .consulta-page .container {
+        padding: 32px 18px 56px;
+    }
+
+    .resultado-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .consulta-form,
+    .resultado {
+        padding: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .consulta-page .logo-site {
+        animation: none;
+    }
+
+    .consulta-form button {
+        transition: none;
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

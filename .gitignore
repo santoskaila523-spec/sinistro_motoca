@@ -1,0 +1,38 @@
+# Dependencies
+/vendor/
+
+# IDE / Editor
+/.vscode/
+/.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+/.env
+/.env.*
+!.env.example
+/config/analise_ia_externa.local.php
+
+# Runtime / cache / temp
+/uploads/*
+!/uploads/.gitkeep
+/tmp/
+/cache/
+/storage/
+
+# Logs
+*.log
+/error_log
+/php_error_log
+
+# Generated exports
+/exports/*.csv
+!/exports/.gitkeep
+
+# Test / coverage
+/coverage/
+/.phpunit.result.cache
+
+# OS files
+.DS_Store
+Thumbs.db

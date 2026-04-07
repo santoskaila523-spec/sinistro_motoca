@@ -1,0 +1,249 @@
+﻿:root {
+    --motoca-yellow: #f5e500;
+    --motoca-yellow-soft: rgba(245, 229, 0, 0.12);
+    --motoca-border: rgba(245, 229, 0, 0.22);
+    --motoca-text-soft: #d4d4d4;
+}
+
+html,
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-page {
+    min-height: 100dvh;
+    background:
+        radial-gradient(circle at top, rgba(245, 229, 0, 0.11), transparent 28%),
+        linear-gradient(180deg, #050505 0%, #000 60%, #080808 100%);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #fff;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.home-page .container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 100dvh;
+    margin: 0 auto;
+    padding: 40px 20px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page .logo {
+    max-width: 200px;
+    margin: 0 auto 50px;
+    display: block;
+}
+
+.home-page .logo-site {
+    width: 320px;
+    max-width: 100%;
+    margin-bottom: 28px;
+    animation: logoFloat 3.2s ease-in-out infinite;
+    filter: brightness(1.08) contrast(1.04) saturate(1.45) hue-rotate(3deg) drop-shadow(0 6px 14px rgba(245, 229, 0, .16));
+}
+
+.home-page .hero-copy {
+    max-width: 720px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.home-page .hero-kicker {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: var(--motoca-yellow-soft);
+    color: var(--motoca-yellow);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.home-page h1 {
+    font-size: 38px;
+    color: var(--motoca-yellow);
+    margin-bottom: 12px;
+}
+
+.home-page .subtitulo {
+    font-size: 17px;
+    color: var(--motoca-text-soft);
+    line-height: 1.6;
+}
+
+.antes-comecar {
+    width: 100%;
+    margin: 0 auto 38px;
+    padding: 24px;
+    border: 1px solid var(--motoca-border);
+    border-radius: 28px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.antes-comecar-header {
+    max-width: 680px;
+    margin-bottom: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--motoca-yellow-soft);
+    color: var(--motoca-yellow);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.antes-comecar h2 {
+    font-size: 24px;
+    line-height: 1.35;
+    color: #fff7a8;
+    text-align: center;
+}
+
+.antes-comecar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.info-card {
+    padding: 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    text-align: center;
+}
+
+.info-card strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--motoca-yellow);
+}
+
+.info-card p {
+    color: var(--motoca-text-soft);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.home-page .opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.home-page .card {
+    width: 300px;
+    padding: 32px 26px;
+    border-radius: 22px;
+    border: 2px solid var(--motoca-yellow);
+    background: transparent;
+    text-decoration: none;
+    color: var(--motoca-yellow);
+    transition: all .3s ease;
+    text-align: center;
+}
+
+.home-page .card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.home-page .card p {
+    font-size: 14px;
+    color: var(--motoca-text-soft);
+    line-height: 1.4;
+}
+
+.home-page .card:hover,
+.home-page .card:focus-visible {
+    background: var(--motoca-yellow);
+    color: #000;
+    transform: scale(1.06);
+    outline: none;
+}
+
+.home-page .card:hover p,
+.home-page .card:focus-visible p {
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .home-page .container {
+        min-height: auto;
+        padding: 32px 20px 48px;
+        justify-content: flex-start;
+    }
+
+    .home-page .logo-site {
+        width: 250px;
+    }
+
+    .home-page h1 {
+        font-size: 30px;
+    }
+
+    .antes-comecar {
+        padding: 20px;
+    }
+
+    .antes-comecar h2 {
+        font-size: 20px;
+    }
+
+    .antes-comecar-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .opcoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .home-page .card {
+        width: 100%;
+        max-width: 340px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page .logo-site {
+        animation: none;
+    }
+
+    .home-page .card {
+        transition: none;
+    }
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

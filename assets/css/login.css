@@ -1,0 +1,136 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   FUNDO
+========================= */
+.bg-admin {
+    background: radial-gradient(circle at top, #111, #000);
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+/* =========================
+   BOX LOGIN
+========================= */
+.login-box {
+    background: linear-gradient(180deg, #111, #0b0b0b);
+    padding: 40px 32px;
+    border-radius: 18px;
+
+    width: 100%;
+    max-width: 380px;
+
+    text-align: center;
+
+    box-shadow:
+        0 0 25px rgba(255,255,0,.25),
+        0 20px 50px rgba(0,0,0,.6);
+}
+
+/* =========================
+   LOGO
+========================= */
+.login-logo {
+    width: 130px;
+    margin-bottom: 22px;
+    filter: brightness(1.08) contrast(1.04) saturate(1.45) hue-rotate(3deg) drop-shadow(0 6px 14px rgba(245, 229, 0, .16));
+}
+
+/* =========================
+   TITULO
+========================= */
+.login-box h2 {
+    color: #FFFF00;
+    font-size: 28px;
+    margin-bottom: 30px;
+
+    font-family: "Poppins", "Inter", Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   INPUTS
+========================= */
+.login-box input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+
+    background: #000;
+    border: 2px solid #FFFF00;
+    border-radius: 12px;
+
+    color: #fff;
+    font-size: 14px;
+
+    transition: border .2s, box-shadow .2s;
+}
+
+.login-box input::placeholder {
+    color: #777;
+}
+
+.login-box input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,255,0,.45);
+}
+
+/* =========================
+   BOTAO
+========================= */
+.login-box button {
+    width: 100%;
+    padding: 15px;
+
+    background: #FFFF00;
+    color: #000;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s, opacity .2s;
+}
+
+/* HOVER */
+.login-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255,255,0,.45);
+    opacity: .95;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 22px;
+        border-radius: 16px;
+    }
+
+    .login-box h2 {
+        font-size: 24px;
+    }
+
+    .login-logo {
+        width: 110px;
+    }
+}

@@ -1,0 +1,188 @@
+﻿.third-party-page {
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #050505 0%, #000 100%);
+}
+
+.third-party-page .container-form {
+    position: relative;
+    z-index: 2;
+}
+
+.third-party-page .form-header {
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    backdrop-filter: none;
+    margin-bottom: 10px;
+}
+
+.third-party-page .form-header .logo:not(.logo-site) {
+    animation: logoFloat 3s ease-in-out infinite;
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+}
+
+.contexto-card {
+    margin-bottom: 28px;
+    padding: 28px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top right, rgba(245, 229, 0, 0.12), transparent 32%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid rgba(245, 229, 0, 0.18);
+    box-shadow: 0 22px 46px rgba(0, 0, 0, 0.38);
+}
+
+.contexto-card h2 {
+    margin: 10px 0 14px;
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.contexto-card p {
+    margin: 0 0 12px;
+    color: #f4f4f4;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contexto-card p:last-child {
+    margin-bottom: 0;
+}
+
+.contexto-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(245, 229, 0, 0.12);
+    border: 1px solid rgba(245, 229, 0, 0.34);
+    color: #f5e500;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.contexto-definicoes,
+.contexto-lista {
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contexto-definicoes p,
+.contexto-lista strong,
+.contexto-lista li {
+    color: #ffffff;
+}
+
+.contexto-definicoes p {
+    margin-bottom: 10px;
+}
+
+.contexto-definicoes p:last-child {
+    margin-bottom: 0;
+}
+
+.contexto-lista strong {
+    display: block;
+    margin-bottom: 12px;
+    color: #f5e500;
+    font-size: 14px;
+}
+
+.contexto-lista ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.contexto-lista li {
+    margin-bottom: 8px;
+    line-height: 1.55;
+}
+
+.contexto-lista li:last-child {
+    margin-bottom: 0;
+}
+
+.hero-chip {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(245,229,0,.7);
+    color: #f5e500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+}
+
+.campo-perfil {
+    padding: 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.03);
+}
+
+.perfil-bloqueio {
+    margin-bottom: 18px;
+    padding: 14px;
+    border: 1px solid rgba(255, 106, 106, .55);
+    border-radius: 14px;
+    background: rgba(255, 77, 77, .1);
+    text-align: center;
+}
+
+.perfil-bloqueio strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffb1b1;
+}
+
+.perfil-bloqueio p {
+    color: #ffd6d6;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.btn-encerrar {
+    border-color: #ff6a6a;
+    color: #ff9e9e;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.btn-encerrar:hover {
+    background: #ff6a6a;
+    color: #140404;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 600px) {
+    .contexto-card {
+        padding: 22px 18px;
+        border-radius: 22px;
+    }
+
+    .contexto-card h2 {
+        font-size: 20px;
+    }
+
+    .contexto-definicoes,
+    .contexto-lista {
+        padding: 16px;
+        border-radius: 18px;
+    }
+}
+

@@ -1,0 +1,397 @@
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   BASE ADMIN
+========================= */
+.admin-page {
+    background: #0b0b0b;
+    color: #eaeaea;
+    font-family: "Inter", Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.admin-page .container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* =========================
+   LOGO E TÍTULO
+========================= */
+.admin-page .logo {
+    display: block;
+    margin: 0 auto 25px;
+    max-width: 210px;
+}
+
+.admin-page .logo-site {
+    filter: brightness(1.08) contrast(1.04) saturate(1.45) hue-rotate(3deg) drop-shadow(0 6px 14px rgba(245, 229, 0, .16));
+}
+
+.admin-page h1 {
+    text-align: center;
+    color: #FFFF00;
+    margin: 10px 0 35px;
+    font-size: 28px;
+}
+
+.admin-page .contexto-admin {
+    margin: 0 auto 28px;
+    max-width: 980px;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 212, 0, .18);
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at top right, rgba(255, 212, 0, .1), transparent 36%),
+        linear-gradient(180deg, rgba(26, 26, 26, .96), rgba(14, 14, 14, .98));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .24);
+}
+
+.admin-page .contexto-admin strong {
+    color: #fff7a6;
+}
+
+.admin-page .contexto-admin p {
+    margin: 0;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.admin-page .perfil-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 212, 0, .28);
+    background: rgba(255, 212, 0, .08);
+    color: #fff3a0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.admin-page .resumo-operacional {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 0 auto 26px;
+    max-width: 980px;
+}
+
+.admin-page .resumo-card {
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, .06);
+    background: linear-gradient(180deg, #141414, #0f0f0f);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, .22);
+}
+
+.admin-page .resumo-card h3 {
+    margin: 0 0 8px;
+    color: #f5f5f5;
+    font-size: 15px;
+}
+
+.admin-page .resumo-card p {
+    margin: 0;
+    color: #9f9f9f;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.admin-page .resumo-card strong {
+    color: #fff2a0;
+}
+
+/* =========================
+   DASHBOARD (CARDS)
+========================= */
+.admin-page .dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+/* =========================
+   CARD CIRCULAR (RESPONSIVO)
+========================= */
+.admin-page .card {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+
+    cursor: default;
+}
+
+/* 🔥 HOVER LEVANTANDO + GLOW */
+.admin-page .card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.6),
+        0 0 18px rgba(255,212,0,.45);
+    background: radial-gradient(circle at top, #222, #111);
+}
+
+/* TEXTO */
+.admin-page .card h3 {
+    font-size: 12px;
+    font-weight: 500;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.admin-page .card span {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* =========================
+   CORES POR STATUS
+========================= */
+.admin-page .card.total span {
+    color: #ffffff;
+}
+
+.admin-page .card.andamento span {
+    color: #FFD400;
+}
+
+.admin-page .card.finalizado span {
+    color: #00E676;
+}
+
+.admin-page .card.processo_juridico span {
+    color: #FF7043;
+}
+
+.admin-page .card.arquivado span {
+    color: #9E9E9E;
+}
+
+/* =========================
+   STATUS BADGE (TABELA)
+========================= */
+.admin-page .status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.em_andamento {
+    background: rgba(255,212,0,.15);
+    color: #FFD400;
+}
+
+.status.finalizado {
+    background: rgba(0,230,118,.15);
+    color: #00E676;
+}
+
+.status.processo_juridico {
+    background: rgba(255,112,67,.15);
+    color: #FF7043;
+}
+
+.status.arquivado {
+    background: rgba(158,158,158,.15);
+    color: #9E9E9E;
+}
+
+/* =========================
+   TABELA
+========================= */
+.admin-page .tabela {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+
+/* CABEÇALHO */
+.admin-page .tabela thead th {
+    padding: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FFD400;
+}
+
+/* LINHAS */
+.admin-page .tabela tbody td {
+    background: linear-gradient(180deg, #121212, #0d0d0d);
+    padding: 16px 14px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+
+    border-top: 1px solid rgba(255,212,0,.35);
+    border-bottom: 1px solid rgba(255,212,0,.35);
+}
+
+/* EXTREMIDADES */
+.admin-page .tabela tbody td:first-child {
+    border-left: 1px solid rgba(255,212,0,.35);
+    border-radius: 16px 0 0 16px;
+}
+
+.admin-page .tabela tbody td:last-child {
+    border-right: 1px solid rgba(255,212,0,.35);
+    border-radius: 0 16px 16px 0;
+}
+
+/* HOVER DA TABELA */
+.admin-page .tabela tbody tr:hover td {
+    background: #151515;
+    border-color: #FFD400;
+}
+
+.admin-page .tabela tbody tr.linha-atencao td {
+    border-top-color: rgba(255, 77, 77, .45);
+    border-bottom-color: rgba(255, 77, 77, .45);
+}
+
+.admin-page .tabela tbody tr.linha-atencao td:first-child {
+    border-left: 1px solid rgba(255, 77, 77, .45);
+}
+
+.admin-page .tabela tbody tr.linha-atencao td:last-child {
+    border-right: 1px solid rgba(255, 77, 77, .45);
+}
+
+/* =========================
+   AÇÕES
+========================= */
+.admin-page .acoes {
+    font-weight: 600;
+}
+
+.acao-ver {
+    color: #FFD400;
+    text-decoration: none;
+}
+
+.acao-ver:hover {
+    text-decoration: underline;
+}
+
+.acao-apagar {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+.acao-apagar:hover {
+    text-decoration: underline;
+}
+
+.acao-ver:focus-visible,
+.acao-apagar:focus-visible {
+    outline: 2px solid #fff28a;
+    outline-offset: 2px;
+}
+
+.separador {
+    color: #555;
+    margin: 0 8px;
+}
+
+.admin-page .estado-vazio {
+    max-width: 520px;
+    margin: 12px auto;
+    padding: 22px 18px;
+    border-radius: 18px;
+    border: 1px dashed rgba(255, 212, 0, .25);
+    background: linear-gradient(180deg, rgba(255, 212, 0, .05), rgba(255, 255, 255, .02));
+}
+
+.admin-page .estado-vazio strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff2a0;
+    font-size: 15px;
+}
+
+.admin-page .estado-vazio span {
+    display: block;
+    color: #aaaaaa;
+    line-height: 1.5;
+    font-size: 13px;
+}
+
+/* =========================
+   GRÁFICO
+========================= */
+.grafico-container {
+    max-width: 480px;
+    height: 280px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.grafico-container canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    .admin-page .contexto-admin {
+        padding: 14px;
+    }
+
+    .admin-page .card {
+        width: 110px;
+        height: 110px;
+    }
+
+    .admin-page .card span {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-page .dashboard {
+        gap: 18px;
+    }
+
+    .admin-page .resumo-operacional {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-page .card {
+        width: 100px;
+        height: 100px;
+    }
+}
