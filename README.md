@@ -77,7 +77,3 @@ Para habilitar a análise externa no detalhe do sinistro, defina variáveis de a
 - `MOTOCA_AI_PROVIDER_LABEL=IA externa`
 
 Com isso, a tela [admin/visualizar.php](/c:/xampp/htdocs/sinistro_motoca/admin/visualizar.php) passa a exibir um botão para gerar o parecer estruturado com IA externa e guardar cache local em `logs/ai_analises/`.
-
-## Documentos de Apoio
-
-- [docs/BACKUP_RESTAURACAO.md](/c:/xampp/htdocs/sinistro_motoca/docs/BACKUP_RESTAURACAO.md)
